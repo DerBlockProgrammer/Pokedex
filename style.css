@@ -1,0 +1,231 @@
+body {
+
+    
+     margin: 0; /* Entfernt Standardabstände */
+    padding: 0; /* Entfernt Standardabstände */
+    font-family: Arial, sans-serif; /* Wähle eine saubere Schriftart */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(91, 32, 146, 0.8)); /* Verwende denselben Farbverlauf wie im Header */
+    color: white; /* Textfarbe für bessere Lesbarkeit */
+  
+}
+
+header {
+    display: flex;
+    /* Flexbox für zentrierte Inhalte */
+    background-color: rgb(181 181 181);;
+    /* Beispiel-Hintergrundfarbe */
+    color: white;
+    /* Textfarbe */
+    height: 90px;
+    /* Höhe des Headers */
+   
+    align-items: center;
+    /* Vertikale Zentrierung */
+    padding: 0 20px;
+    /* Innenabstand (optional) */
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(91, 32, 146, 0.8)); /* Farbverlauf von Schwarz zu Lila */
+    position: relative; /* Header als Referenzpunkt für das absolute Positionieren des Pokéballs */
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px; /* Abgerundete Ecken für einen moderneren Look */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Transparente, weiße Umrandung */
+    width: 200px;
+    margin: 10px;
+    background-color: rgba(34, 34, 34, 0.9); /* Dunkles Grau-Lila für einen subtilen Look */
+    color: white; /* Weiße Schriftfarbe für besseren Kontrast */
+    text-align: center;
+    perspective: 1000px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+
+
+
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    max-width: 900px;
+    /* Maximale Breite, um 4 Karten pro Reihe zu haben */
+    /* Maximale Breite für 4 Karten pro Zeile */
+    margin: auto;
+    /* Zentriert den Content */
+    padding: 20px;
+
+}
+.cardContainer:hover {
+    transform: scale(1.05);
+    background-color: rgba(64, 64, 122, 0.9); /* Leichte Farbänderung beim Hover (heller Lila-Ton) */
+}
+
+
+.nameBox {
+    display: flex;
+    justify-content: center;
+}
+
+.cardContainer img {
+    height: 100px;
+    margin-top: 50px;
+}
+
+.pokemonImages {
+    border: 2px solid black;
+    background-color: aliceblue;
+    box-shadow: 10px;
+}
+
+.cards {
+    width: 200px;
+    height: 300px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.cards.flipped {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.cards.expanded {
+    width: 400px;
+    /* Vergrößert die Karte */
+    height: 500px;
+    transition: width 0.5s, height 0.5s;
+    /* Sanfte Übergänge */
+}
+
+.details {
+    display: none;
+    /* Standardmäßig versteckt */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+.cardContainer {
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.pokemonImages {
+    width: 100px;
+}
+
+.modal {
+    display: none;
+    /* Versteckt das Popup standardmäßig */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Halbtransparenter Hintergrund */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 400px;
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Verbesserte Kartenanimation */
+.cardContainer {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardContainer:hover {
+    transform: scale(1.05);
+    /* Vergrößert die Karte leicht beim Hover */
+}
+
+.flipped .cards {
+    /*dreht die Karte um beim draufklicken*/
+    transform: rotateY(180deg); 
+}
+#input{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+   margin-top: 50px;
+}
+h1{
+    font-family: 'Arial', sans-serif; /* Wähle eine moderne, leicht lesbare Schriftart */
+    font-size: 2rem; /* Passe die Größe an, je nach Design */
+    color: white; /* Weiße Schriftfarbe für guten Kontrast */
+    letter-spacing: 2px; /* Etwas Platz zwischen den Buchstaben für Eleganz */
+    text-transform: uppercase; /* Großbuchstaben für einen professionellen Look */
+}
+.ball{
+    position: fixed; /* Der Pokéball bleibt oben rechts, auch beim Scrollen */
+    top: 10px;
+    right: 20px;
+    z-index: 100; /* Hoher z-index, damit der Pokéball immer sichtbar bleibt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ball img {
+    width: 60px; /* Proportional zur Höhe */
+
+    animation: rotate 4s linear infinite, pulse 2s ease-in-out infinite; /* Rotation und Puls-Effekt kombiniert */
+    
+    /* Schatten und Leuchteffekt */
+    /* box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8), 0px 0px 5px rgba(0, 0, 0, 0.5); */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Standardgröße */
+    }
+    50% {
+        transform: scale(1.1); /* Leichtes Vergrößern in der Mitte der Animation */
+    }
+    100% {
+        transform: scale(1); /* Zurück zur Standardgröße */
+    }
+}

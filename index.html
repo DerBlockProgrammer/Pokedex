@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDeck</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="fetchDataJson()">
+    <header>
+        <div class="überschrift">
+
+            <h1>PokeDex</h1>
+
+            
+        </div>
+        <div class="ball">
+            <img src="./img/Pokeball.png" alt="">
+        </div>
+    </header>
+
+    <div id="input">
+        <input type="text" id="search" placeholder="Search by Type ">
+        <button onclick="filterPokemon()">Search</button>
+    </div>
+    <div id="content"></div>
+
+    <!-- Hier wird das Popup für Details eingefügt -->
+    <div id="pokemon-details-popup" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-pokemon-name"></h2>
+            <img id="popup-pokemon-image" src="" alt="Pokemon">
+            <div id="popup-pokemon-stats"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
