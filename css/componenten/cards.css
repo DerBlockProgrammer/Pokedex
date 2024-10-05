@@ -1,0 +1,103 @@
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px; /* Abgerundete Ecken für einen moderneren Look */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Transparente, weiße Umrandung */
+    width: 200px;
+    margin: 10px;
+    background-color: rgba(34, 34, 34, 0.9); /* Dunkles Grau-Lila für einen subtilen Look */
+    color: white; /* Weiße Schriftfarbe für besseren Kontrast */
+    text-align: center;
+    perspective: 1000px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+
+
+
+}
+.cardContainer img {
+    height: 100px;
+    margin-top: 50px;
+}
+.pokemonImages {
+    border: 2px solid black;
+    background-color: aliceblue;
+    box-shadow: 10px;
+}
+.cards {
+    width: 200px;
+    height: 300px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.cards.flipped {
+    transform: rotateY(180deg);
+}
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back {
+    transform: rotateY(180deg);
+}
+.cardContainer:hover {
+    transform: scale(1.05);
+    background-color: rgba(64, 64, 122, 0.9); /* Leichte Farbänderung beim Hover (heller Lila-Ton) */
+}
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px; /* Abgerundete Ecken für einen moderneren Look */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Transparente, weiße Umrandung */
+    width: 200px;
+    margin: 10px;
+    background-color: rgba(34, 34, 34, 0.9); /* Dunkles Grau-Lila für einen subtilen Look */
+    color: white; /* Weiße Schriftfarbe für besseren Kontrast */
+    text-align: center;
+    perspective: 1000px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+    cursor: pointer;
+
+
+
+}
+
+
+.cardContainer:hover {
+    transform: scale(1.05);
+    background-color: rgba(64, 64, 122, 0.9); /* Leichte Farbänderung beim Hover (heller Lila-Ton) */
+}
+
+
+.nameBox {
+    display: flex;
+    justify-content: center;
+}
+.cards.expanded {
+    width: 400px;
+    /* Vergrößert die Karte */
+    height: 500px;
+    transition: width 0.5s, height 0.5s;
+    /* Sanfte Übergänge */
+}
+.details {
+    display: none;
+    /* Standardmäßig versteckt */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+.pokemonImages {
+    width: 100px;
+}
+.flipped .cards {
+    /*dreht die Karte um beim draufklicken*/
+    transform: rotateY(180deg); 
+}

@@ -5,10 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDeck</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/layout/body.css">
+    <link rel="stylesheet" href="./css/layout/header.css">
+    <link rel="stylesheet" href="./css/layout/content.css">
+    <link rel="stylesheet" href="./css/componenten/cards.css">
+    <link rel="stylesheet" href="./css/componenten/modal.css">
+    <link rel="stylesheet" href="./css/componenten/animation.css">
+    <link rel="stylesheet" href="./css/componenten/input.css">
+    
 </head>
 
 <body onload="fetchDataJson()">
+    <div id="loading-container">
+        <div id="loading-bar"></div>
+    </div>
+    
     <header>
         <div class="überschrift">
 
@@ -37,7 +48,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

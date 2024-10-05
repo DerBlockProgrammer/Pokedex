@@ -1,0 +1,14 @@
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    max-width: 900px;
+    /* Maximale Breite, um 4 Karten pro Reihe zu haben */
+    /* Maximale Breite für 4 Karten pro Zeile */
+    margin: auto;
+    /* Zentriert den Content */
+    padding: 20px;
+
+}

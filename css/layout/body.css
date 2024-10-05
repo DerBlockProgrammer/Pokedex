@@ -1,0 +1,10 @@
+body {
+
+    
+    margin: 0; /* Entfernt Standardabstände */
+   padding: 0; /* Entfernt Standardabstände */
+   font-family: Arial, sans-serif; /* Wähle eine saubere Schriftart */
+   background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(91, 32, 146, 0.8)); /* Verwende denselben Farbverlauf wie im Header */
+   color: white; /* Textfarbe für bessere Lesbarkeit */
+ 
+}

@@ -18,10 +18,14 @@ async function fetchDataJson() {
 
     // C: API-Abfrage, um eine Liste von 12 Pokémon zu erhalten.
     let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=18&offset=0");
+    if (!response.ok) {
+        throw new Error('Fehler beim Abrufen der Pokémon-Daten');
+    }
+    
     
     // D: Umwandeln der Antwort in ein JSON-Objekt, das weiterverarbeitet werden kann.
     let responseToJson = await response.json();
-    
+  
     // E: HTML-Element mit der ID 'content' wird geleert, um Platz für neue Pokémon-Daten zu schaffen.
     let content = document.getElementById("content");
     content.innerHTML = "";
@@ -68,7 +72,9 @@ async function fetchDataJson() {
             </div>
         </div>`;
     }
+    
 }
+
 
 // J: Neue Funktion zum Filtern der Pokémon nach Typen (Elementen)
 function filterPokemon() {
@@ -109,6 +115,7 @@ function filterPokemon() {
     if (!foundPokemon) {
         content.innerHTML = "<p>No Pokémon found with that type.</p>";
     }
+    
 }
 
 // O: Funktion zum Anzeigen von detaillierten Pokémon-Informationen in einem Popup.
