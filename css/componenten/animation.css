@@ -13,17 +13,19 @@
     0% { width: 0; }
     100% { width: 100%; }
 }
+
 #loading-container {
     position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
     z-index: 1000;
+    
   
 }
 
@@ -31,5 +33,8 @@
     width: 0;
     height: 10px;
     background-color: #00ff00;
-    animation: load 3s infinite;
+    animation: load 3s ease-out;
+    
 }
+
+

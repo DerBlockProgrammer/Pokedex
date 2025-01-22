@@ -3,6 +3,18 @@ let allPokemon = [];
 
 // B: Die fetchDataJson-Funktion lädt Pokémon-Daten von der API und speichert sie in allPokemon.
 async function fetchDataJson() {
+   // A: Ladebalken anzeigen
+   let loadingContainer = document.getElementById("loading-container");
+   let loadingBar = document.getElementById("loading-bar");
+   
+   // Ladebalken sichtbar machen
+   loadingContainer.style.display = "block";
+
+   // Ladebalken für 3 Sekunden animieren
+   setTimeout(() => {
+       loadingContainer.style.display = "none";  // Ladebalken nach 3 Sekunden ausblenden
+   }, 3000); // 3 Sekunden
+
     const typeIcons = {
         fire: '🔥',
         water: '💧',
